@@ -52,4 +52,32 @@ function theme_logo_setup_the_custom_logo() {
 	}
 
 }
+add_theme_support( 'post-thumbnails', array( 'post', 'cars' ) );
+
+// Register Custom Post Types
+add_action('init', 'register_custom_posts_init');
+
+function register_custom_posts_init() {
+	// Register Cars
+	$products_labels = array(
+		'name'               => 'Cars',
+		'singular_name'      => 'Car',
+		'menu_name'          => 'Cars'
+	);
+	$products_args = array(
+		'labels'             => $products_labels,
+		'public'             => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'publicly_queryable' => true,
+		'query_var' => true,
+		'rewrite' => true,
+		'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions', 'custom_fields' ),
+		'taxonomies' => array('category', 'post_tag'),
+		'menu_position' => 5,
+		'exclude_from_search' => false
+	);
+	register_post_type('cars', $products_args);
+
+}
 	?>

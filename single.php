@@ -1,14 +1,41 @@
-<?php get_header(); ?>
-	<div>
-		<?php if ( have_posts() ) : while ( have_posts() ) :   the_post(); ?>
-			<h2>
-				<a href="<?php the_permalink() ?>">
-					<?php the_title(); ?>
-				</a>
-			</h2>
-			<?php the_content(); ?>
-		<?php endwhile; else: ?>
-			<p>There no posts to show</p>
-		<?php endif; ?>
-	</div>
+<?php
+/**
+ * The template for displaying all single posts and attachments
+ *
+ * @package WordPress
+ * @subpackage Twenty_Fifteen
+ * @since Twenty Fifteen 1.0
+ */
+
+get_header(); ?>
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+
+				// Previous/next post navigation.
+				the_post_navigation( array(
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'fsdtheme' ) . '</span> ' .
+					               '<span class="screen-reader-text">' . __( 'Next post:', 'fsdtheme ' ) . '</span> ' .
+					               '<span class="post-title">%title</span>',
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'fsdtheme' ) . '</span> ' .
+					               '<span class="screen-reader-text">' . __( 'Previous post:', 'fsdtheme' ) . '</span> ' .
+					               '<span class="post-title">%title</span>',
+				) );
+
+				// End the loop.
+			endwhile;
+			?>
+
+        </main><!-- .site-main -->
+    </div><!-- .content-area -->
+
 <?php get_footer(); ?>

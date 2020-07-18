@@ -21,7 +21,7 @@
 <nav class="navbar navbar-expand-md navbar-expand-xl navbar-light pt-5" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'fsd-theme' ); ?>">
+        <button class="navbar-toggler my-button" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'fsd-theme' ); ?>">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="#"> <?php $custom_logo_id = get_theme_mod( 'custom_logo' );
