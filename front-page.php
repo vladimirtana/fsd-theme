@@ -27,29 +27,28 @@
             <div class="col-md-7 col-xl-5 my-5 py-5 offset-1">
                 <div class="col-12"><h6 class="h6-custom featured-pre-title"><?php the_field('featured_headline', 'option'); ?></h6>
                     <h1 class="font-weight-bold text-white"><?php the_field('featured_main_headline', 'option'); ?></h1>
-                    <p class="text-muted subline-featured">The RS Q8 gives you the choice: depending on the selected equipment, its looks are even bolder and sportier to suit your personal ambitions.
-                    </p>
+                    <p class="text-muted subline-featured"><?php the_field('featured_second_headline', 'option'); ?></p>
                 </div>
                 <div class="d-audi-carousel-flex col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="bg-white-carousel-audi mr-3 w-100">
                         <div class="p-4">
-                            <h6>POWER OUTPUT</h6>
-                            <h1>441kw</h1>
-                            <text>(600 hp)</text>
+                            <h6><?php the_field('feature_1_name', 'option'); ?></h6>
+                            <h1><?php the_field('feature_1_value', 'option'); ?></h1>
+                            <text><?php the_field('feature_1_text', 'option'); ?></text>
                         </div>
                     </div>
                     <div class="bg-white-carousel-audi mr-3 w-100">
                         <div class="p-4">
-                            <h6>ACCELERATION</h6>
-                            <h1>3.8</h1>
-                            <text>seconds</text>
+                            <h6><?php the_field('feature_2_name', 'option'); ?></h6>
+                            <h1><?php the_field('feature_2_value', 'option'); ?></h1>
+                            <text><?php the_field('feature_2_text', 'option'); ?></text>
                         </div>
                     </div>
                     <div class="bg-white-carousel-audi mr-3 w-100">
                         <div class="p-4">
-                            <h6>TORQUE</h6>
-                            <h1>800</h1>
-                            <text>Nm</text>
+                            <h6><?php the_field('feature_3_name', 'option'); ?></h6>
+                            <h1><?php the_field('feature_3_value', 'option'); ?></h1>
+                            <text><?php the_field('feature_3_text', 'option'); ?></text>
                         </div>
                     </div>
                 </div>
@@ -60,7 +59,7 @@
     <!-- Custom Post Type Section with cars -->
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 my-5 py-5">
-            <div class="heading-products col-12 text-center"><h1>You might take a look...</h1></div>
+            <div class="heading-products col-12 text-center"><h1><?php the_field('products_heading', 'option'); ?></h1></div>
 			<?php
 
 			$posts = get_posts( array(
@@ -118,9 +117,9 @@
     <div class="row">
         <div class="col-12 audi-carousel-form d-flex">
             <div class="offset-1 col-5 my-5 py-5 col-sm-5 col-md-5 col-lg-5">
-                <h6 class="h6-custom featured-pre-title">CONTACT US</h6>
-                <h1 class="font-weight-bold text-white">If you have any questions don't hesitate to contact us</h1>
-                <img class="footer-image" src="/wp-content/themes/fsd-theme/assets/Images/contact-form-img.png">
+                <h6 class="h6-custom featured-pre-title"><?php the_field('contact_us_headline', 'option'); ?></h6>
+                <h1 class="font-weight-bold text-white"><?php the_field('contact_us_main_headline', 'option'); ?></h1>
+                <img class="footer-image" src="<?php the_field('contact_us_image', 'option'); ?>">
             </div>
             <div class="col-5 col-sm-5 col-md-5 col-lg-5 mr-4 my-form-cf7">
 				<?php echo do_shortcode( '[contact-form-7 id="23" title="Contact form 1"]' ); ?>

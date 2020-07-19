@@ -90,13 +90,17 @@ body {
     padding:14px 0;
 }
 .nav > li:last-child > a {
-    background: #fa2a2a;
+    background: #333333;
     padding:14px 35px!important;
     vertical-align: middle;
     border-radius:3px;
     color:#fff!important;
 
 }
+.nav > li:last-child > a:hover {
+    background:#fa2a2a;
+}
+
 .nav > li:last-child {
     margin-right:5px!important;
 }
