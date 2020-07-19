@@ -236,6 +236,9 @@ body {
         outline: 0;
         font-size:10px;
     }
+    .form-control {
+        font-size:10px;
+    }
     .form-control::placeholder {
         padding-top:0!important;
         padding-bottom:0!important;
@@ -354,8 +357,8 @@ Contact form footer section
     border-radius: 2px!important;
 }
 .form-control::placeholder {
-    padding-top:10px!important;
-    padding-bottom:10px!important;
+    padding-top:10px;
+    padding-bottom:10px;
 }
 .wpcf7 input[type="email"]{
     padding-top:25px;
