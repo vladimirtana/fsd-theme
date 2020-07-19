@@ -1,9 +1,9 @@
 <footer>
         <div class="navbar-inner navbar-footer navbar-dark d-flex">
-            <div class="footer-copyright text-left col-6">
+            <div class="footer-copyright text-left col-3">
                 © 2020 FSD. ALL RIGHTS RESERVED
             </div>
-            <div class="text-right col-6">
+            <div class="text-right col-9">
 				<?php wp_nav_menu( array(
 					'theme_location'  => 'footer',
 					'menu'            => 'Footer Menu',

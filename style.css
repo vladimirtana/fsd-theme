@@ -201,7 +201,9 @@ body {
     }
 }
 @media only screen and (max-width: 375px) {
-
+    .badge-dark p {
+        margin-top:105% !important;
+    }
 }
 .bg-white-carousel-audi text {
     font-style:italic;
@@ -213,6 +215,14 @@ body {
         margin-left:0!important;
         max-width:100% !important;
         position:relative!important;
+    }
+    .wpcf7 input[type="email"]{
+        padding-top:7px!important;
+        padding-bottom:7px!important;
+    }
+    .wpcf7 input[type="text"] {
+        padding-top:7px!important;
+        padding-bottom:7px!important;
     }
 }
 
