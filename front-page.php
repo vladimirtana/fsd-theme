@@ -8,53 +8,48 @@
     <div class="row d-flex m-xl-5 p-xl-5 m-lg-5 p-lg-5 m-md-5 m-sm-1">
         <div class="col-md-12 col-xs-1 col-sm-12 col-lg-6 col-xl-6 h-100 p-xl-5 p-lg-3 p-md-3 p-sm-3 p-xs-2">
             <div class="badge-dark">
-                <p class="position-relative text-center my-featured-text">A progressive design. A powerful engine.</p>
+                <p class="position-relative text-center my-featured-text"><?php the_field('about_us_image_below_text', 'option'); ?></p>
             </div>
             <img class="featured-img-2nd-section ml-3 ml-md-0 d-block"
-                 src="<?php bloginfo( 'template_url' ); ?>/assets/Images/about-us-section.png">
+                 src="<?php the_field('about_us_section_image', 'option'); ?>">
 
 
         </div>
         <div class="col-md-12 col-xs-1 col-sm-12 col-lg-6 col-xl-6 h-100 p-xl-5 p-lg-3 p-md-3 p-sm-3 p-xs-2">
-            <h6 class="featured-pre-title mt-4 ml-5">ABOUT Q8</h6>
-            <h1 class="featured-title ml-5">Welcome to the 8th dimension. The new Audi Q8</h1>
-            <h4 class="headline-1 ml-5 pt-5">With its imposing Singleframe in octagonal design, the Audi Q8 presents the
-                new face
-                of the Q family.</h4>
-            <p class="headline-2 ml-5 pt-4">The radiator grille combines with the forward-mounted spoiler and strongly
-                contoured
-                air inlets to underline its confident look.</p>
+            <h6 class="featured-pre-title mt-4 ml-5"><?php the_field('about_us_headline', 'option'); ?></h6>
+            <h1 class="featured-title ml-5"><?php the_field('about_us_main_headline', 'option'); ?></h1>
+            <h4 class="headline-1 ml-5 pt-5"><?php the_field('about_us_second_headline', 'option'); ?></h4>
+            <p class="headline-2 ml-5 pt-4"><?php the_field('about_us_third_headline', 'option'); ?></p>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 audi-carousel">
-            <div class="offset-1 col-xl-5 my-5 py-5">
-                <div class="col-12"><h6 class="font-weight-bold text-danger h6-custom">FEATURED</h6>
-                    <h1 class="font-weight-bold text-white">Brand new The Audi RSQ8</h1>
-                    <p class="text-muted">The RS Q8 asfnadlgnadjkgnladng lng ljnaegjl anlsdng ladnsg lnl kdnsklg
-                        rndklnsad glnskldgn lksngd
-                        lkn</p>
+        <div class="col-12 audi-carousel d-flex" style="background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 13%, rgba(0,212,255,0) 100%), url('<?php the_field('featured_section_image', 'option'); ?>');">
+            <div class="col-md-7 col-xl-5 my-5 py-5 offset-1">
+                <div class="col-12"><h6 class="h6-custom featured-pre-title"><?php the_field('featured_headline', 'option'); ?></h6>
+                    <h1 class="font-weight-bold text-white"><?php the_field('featured_main_headline', 'option'); ?></h1>
+                    <p class="text-muted subline-featured">The RS Q8 gives you the choice: depending on the selected equipment, its looks are even bolder and sportier to suit your personal ambitions.
+                    </p>
                 </div>
-                <div class="d-audi-carousel-flex col-xl-12">
-                    <div class="bg-white-carousel-audi mr-3">
+                <div class="d-audi-carousel-flex col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <div class="bg-white-carousel-audi mr-3 w-100">
                         <div class="p-4">
                             <h6>POWER OUTPUT</h6>
                             <h1>441kw</h1>
-                            <h6>(600 hp)</h6>
+                            <text>(600 hp)</text>
                         </div>
                     </div>
-                    <div class="bg-white-carousel-audi mr-3">
+                    <div class="bg-white-carousel-audi mr-3 w-100">
                         <div class="p-4">
-                            <h6>POWER OUTPUT</h6>
-                            <h1>441kw</h1>
-                            <h6>(600 hp)</h6>
+                            <h6>ACCELERATION</h6>
+                            <h1>3.8</h1>
+                            <text>seconds</text>
                         </div>
                     </div>
-                    <div class="bg-white-carousel-audi mr-3">
+                    <div class="bg-white-carousel-audi mr-3 w-100">
                         <div class="p-4">
-                            <h6>POWER OUTPUT</h6>
-                            <h1>441kw</h1>
-                            <h6>(600 hp)</h6>
+                            <h6>TORQUE</h6>
+                            <h1>800</h1>
+                            <text>Nm</text>
                         </div>
                     </div>
                 </div>
@@ -84,8 +79,8 @@
 
 						?>
 
-                        <div class="card-deck col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                            <div class="card shadow bg-white rounded">
+                        <div class="card-deck col-12 col-sm-6 col-md-6 col-lg-6 my-2 col-xl-3">
+                            <div class="card shadow-sm bg-white rounded">
 								<?php if ( has_post_thumbnail() ) : ?>
                                     <span class="card-img-top my-4"> <center><?php the_post_thumbnail(); ?></center></span>
 								<?php endif; ?>
@@ -94,11 +89,11 @@
                                         <h6><?php the_field( 'doors' ); ?></h6>
                                         <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                                     </div>
-                                    <div class="card-text">
+                                    <div class="card-text my-5">
                                         <p><?php the_content(); ?></p>
-                                        <div class="text-left d-block">
-                                            <p class="float-left">Starting from:<br><?php the_field( 'price' ); ?>€</p>
-                                            <a href="#" class="btn btn-primary float-right">Buy Now</a>
+                                        <div class="text-left d-block price-start">
+                                            <p class="float-left">Starting from:<br><strong class="price-display"><?php the_field( 'price' ); ?> €</strong></p>
+                                            <a href="#" class="btn btn-primary float-right my-car-button" style="margin-top:6px;">Buy Now</a>
                                         </div>
                                     </div>
 
@@ -122,11 +117,12 @@
 
     <div class="row">
         <div class="col-12 audi-carousel-form d-flex">
-            <div class="col-6 my-5 py-5">
-                <h6 class="font-weight-bold text-danger h6-custom">CONTACT US</h6>
-                <h1 class="font-weight-bold text-white">If you have any quqestions don't hesitate to contact us</h1>
+            <div class="offset-1 col-5 my-5 py-5 col-sm-5 col-md-5 col-lg-5">
+                <h6 class="h6-custom featured-pre-title">CONTACT US</h6>
+                <h1 class="font-weight-bold text-white">If you have any questions don't hesitate to contact us</h1>
+                <img class="footer-image" src="/wp-content/themes/fsd-theme/assets/Images/contact-form-img.png">
             </div>
-            <div class="offset-1 col-5">
+            <div class="col-5 col-sm-5 col-md-5 col-lg-5 mr-4 my-form-cf7">
 				<?php echo do_shortcode( '[contact-form-7 id="23" title="Contact form 1"]' ); ?>
             </div>
         </div>

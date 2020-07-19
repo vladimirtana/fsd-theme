@@ -153,30 +153,135 @@ max-width:100%;
     font-size:16px;
 }
 .audi-carousel{
-    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 13%, rgba(0,212,255,0) 100%), url("/wp-content/themes/fsd-theme/assets/Images/section-banner-1920.jpg");
     background-position: center;
     background-size: cover;
 }
 
 .bg-white-carousel-audi{
-    background: rgb(108,117,125, .3);
+    background: rgb(255, 255, 255, 0.125);
     text-align: center;
-    color: white;
+    color:#fefefe!important;
+    border: 1px solid #4f4f4f;
 }
-
+.subline-featured {
+    color:#c5bcbd!important;
+}
 .h6-custom{
     letter-spacing: 5px;
 }
-@media only screen and (min-width: 567px){.d-audi-carousel-flex{
-    display: flex;
+@media only screen and (min-width: 567px) {
+    .d-audi-carousel-flex {
+        display: flex;
 }
+}
+@media only screen and (min-width: 320px) {
+    .bg-white-carousel-audi {
+        margin-top:20px;
+    }
+}
+.bg-white-carousel-audi text {
+    font-style:italic;
+    font-weight:200;
 }
 
-.audi-carousel-form{
-    background-image: url("/wp-content/themes/fsd-theme/assets/Images/contact-form-img.png"), linear-gradient(90deg, rgba(40,41,46,1) 0%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%);
+/*
+Products Section
+ */
+
+.heading-products h1 {
+    font-weight:600!important;
+    margin-bottom:40px;
+}
+.card {
+    border-color:#f3f3f5!important;
+}
+.card-img-top {
+    max-height: 90px!important;
+    height: 90px;
+}
+.card-title h6 {
+    color:#a3aaba;
+    font-family:'Montserrat', sans-serif;
+    font-size:12px!important;
+}
+.card-title h5 a {
+    color:#212121;
+    text-decoration:none;
+    font-weight:600;
+    font-family:'Montserrat', sans-serif;
+}
+.card-text {
+    color:#a3aaba;
+    font-family:'Montserrat', sans-serif;
+    font-size:12px!important;
+}
+.price-start {
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+.price-display {
+    font-family: 'Roboto Condensed', sans-serif;
+    color:#212121;
+    font-weight:600;
+    font-size:1.25rem;
+}
+.my-car-button {
+    background-color:#fee9e8;
+    border-radius:16px;
+    border-width: 0px;
+    color:#fb4b4b;
+    font-size:14px;
+    padding:7px 15px 7px 15px;
+}
+/*
+Contact form footer section
+ */
+.audi-carousel-form {
     background-size: auto;
     background-repeat: no-repeat;
+    background:linear-gradient(90deg, rgba(40,41,46,1) 0%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%);
 }
-.my-card {
-
+.footer-image {
+    z-index:99999;
+    margin-left:-290px;
+    max-width:160%;
+    position:absolute;
+}
+.my-form-cf7 {
+    background-color:#011f05;
+    margin-top:100px;
+    margin-bottom:50px;
+}
+.my-cf-button {
+    background-color:transparent!important;
+    border:2px solid #4d6251!important;
+    border-radius: 2px!important;
+    font-size:12px!important;
+    text-align: center!important;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.form-control {
+    color: #68736b!important;
+    background-color:#27402a!important;
+    border-color: #68736b!important;
+    border-radius: 2px!important;
+}
+.form-control:focus{
+    color: #68736b!important;
+    background-color:#27402a!important;
+    border-color: #68736b!important;
+    border-radius: 2px!important;
+}
+.form-control::placeholder {
+    padding-top:10px!important;
+    padding-bottom:10px!important;
+}
+.wpcf7 input[type="email"]{
+    padding-top:25px!important;
+    padding-bottom:25px!important;
+}
+.wpcf7 input[type="text"] {
+    padding-top:25px!important;
+    padding-bottom:25px!important;
 }

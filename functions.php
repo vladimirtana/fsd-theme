@@ -80,4 +80,23 @@ function register_custom_posts_init() {
 	register_post_type('cars', $products_args);
 
 }
+/*
+ * TGM Plugin activation and requirements for our FSD Theme
+ */
+require_once get_template_directory() . '/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/tgm_activation.php';
+
+/**
+ * Add our FSD Theme Customizer content
+ */
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page( array(
+		'page_title' => 'FSD Theme General Settings',
+		'menu_title' => 'FSD Theme Settings',
+		'menu_slug'  => 'fsd-theme-general-settings',
+		'capability' => 'edit_posts',
+		'redirect'   => false
+	) );
+}
 	?>
