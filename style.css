@@ -209,30 +209,49 @@ body {
     font-style:italic;
     font-weight:200;
 }
+@media screen and (max-width: 452px) and (min-width: 376px) {
+    .badge-dark p {
+        margin-top:107% !important;
+    }
+
+}
 @media only screen and (max-width: 567px) {
     .footer-image {
         z-index:1!important;
-        margin-left:0!important;
-        max-width:100% !important;
         position:relative!important;
     }
-    .wpcf7 input[type="email"]{
-        padding-top:7px!important;
-        padding-bottom:7px!important;
+    .my-form-cf7 {
+        background-image:linear-gradient(90deg, rgba(40,41,46,1) 0%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%);
+    }
+    .wpcf7 input[type="email"] {
+        padding-top:0px!important;
+        padding-bottom:0px!important;
     }
     .wpcf7 input[type="text"] {
-        padding-top:7px!important;
-        padding-bottom:7px!important;
+        padding-top:0px!important;
+        padding-bottom:0px!important;
+    }
+    .footer-copyright {
+        color:#8d8e90;
+        font-size:6px;
+    }
+    .footer-container li a {
+        color:#8d8e90;
+        text-decoration: none;
+        font-size:6px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .footer-image {
         z-index:1!important;
-        margin-left:0!important;
         max-width:100% !important;
-        margin-top:200px;
         position:relative!important;
+    }
+    .my-form-cf7 {
+        margin-top:10px!important;
+        margin-bottom:50px;
+        background-image:linear-gradient(90deg, rgba(40,41,46,1) 0%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%);
     }
 }
 /*
@@ -329,22 +348,24 @@ Contact form footer section
     padding-bottom:10px!important;
 }
 .wpcf7 input[type="email"]{
-    padding-top:25px!important;
-    padding-bottom:25px!important;
+    padding-top:25px;
+    padding-bottom:25px;
 }
 .wpcf7 input[type="text"] {
-    padding-top:25px!important;
-    padding-bottom:25px!important;
+    padding-top:25px;
+    padding-bottom:25px;
 }
 footer {
     background:linear-gradient(90deg, rgba(40,41,46,1) 0%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%) !important;
 }
 .footer-copyright {
     color:#8d8e90;
+    font-size:10px;
 }
 .footer-container li a {
     color:#8d8e90;
     text-decoration: none;
+    font-size:10px;
 }
 #footer_nav {
     margin-bottom:0!important;
