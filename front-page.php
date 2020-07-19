@@ -1,10 +1,17 @@
 <?php get_header(); ?>
-<div class="container-fluid">
+
+
+<div class="container-fluid mw-100 min-vw-100 overflow-hidden">
+
+
     <div class="slider-custom">
 		<?php
 		echo do_shortcode( '[smartslider3 slider="2"]' );
 		?>
     </div>
+
+
+
     <div class="row d-flex m-xl-5 p-xl-5 m-lg-5 p-lg-5 m-md-5 m-sm-1" id="about-us">
         <div class="col-md-12 col-xs-1 col-sm-12 col-lg-6 col-xl-6 h-100 p-xl-5 p-lg-3 p-md-3 p-sm-3 p-xs-2">
             <div class="badge-dark">
@@ -22,6 +29,10 @@
             <p class="headline-2 ml-5 pt-4"><?php the_field('about_us_third_headline', 'option'); ?></p>
         </div>
     </div>
+
+
+
+
     <div class="row">
         <div class="col-12 audi-carousel d-flex" style="background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 13%, rgba(0,212,255,0) 100%), url('<?php the_field('featured_section_image', 'option'); ?>');">
             <div class="col-md-7 col-xl-5 my-5 py-5 offset-1">
@@ -127,7 +138,6 @@
             </div>
         </div>
     </div>
-
 
 </div>
 

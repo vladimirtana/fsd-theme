@@ -193,11 +193,15 @@ body {
 
     .featured-img-2nd-section {
         margin-left:0%!important;
+        max-width:100%;
     }
 
     .bg-white-carousel-audi {
         margin-top:20px;
     }
+}
+@media only screen and (max-width: 375px) {
+
 }
 .bg-white-carousel-audi text {
     font-style:italic;
@@ -219,9 +223,6 @@ body {
         max-width:100% !important;
         margin-top:200px;
         position:relative!important;
-    }
-    .navbar-inner .navbar-footer .navbar-dark {
-        display:block!important;
     }
 }
 /*
@@ -331,10 +332,14 @@ footer {
 .footer-copyright {
     color:#8d8e90;
 }
-.footer-container li {
-    margin-left:40px!important;
-}
 .footer-container li a {
     color:#8d8e90;
     text-decoration: none;
+}
+#footer_nav {
+    margin-bottom:0!important;
+}
+#footer_nav li {
+    display: inline-block!important;
+    margin-right:40px!important;
 }
