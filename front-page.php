@@ -128,7 +128,7 @@
 
     <div class="row" id="contact-us">
         <div class="col-12 audi-carousel-form d-md-flex d-block">
-            <div class="offset-md-1 col-12 my-1 py-1 my-md-5 py-md-5 col-sm-12 col-md-5 col-lg-5">
+            <div class="offset-1 col-10 py-5 my-5 my-md-5 py-md-5 col-sm-8 col-md-5 col-lg-5">
                 <h6 class="h6-custom featured-pre-title"><?php the_field('contact_us_headline', 'option'); ?></h6>
                 <h1 class="font-weight-bold text-white"><?php the_field('contact_us_main_headline', 'option'); ?></h1>
                 <img class="footer-image" src="<?php the_field('contact_us_image', 'option'); ?>">
