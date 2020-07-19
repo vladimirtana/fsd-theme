@@ -5,7 +5,7 @@
 		echo do_shortcode( '[smartslider3 slider="2"]' );
 		?>
     </div>
-    <div class="row d-flex m-xl-5 p-xl-5 m-lg-5 p-lg-5 m-md-5 m-sm-1">
+    <div class="row d-flex m-xl-5 p-xl-5 m-lg-5 p-lg-5 m-md-5 m-sm-1" id="about-us">
         <div class="col-md-12 col-xs-1 col-sm-12 col-lg-6 col-xl-6 h-100 p-xl-5 p-lg-3 p-md-3 p-sm-3 p-xs-2">
             <div class="badge-dark">
                 <p class="position-relative text-center my-featured-text"><?php the_field('about_us_image_below_text', 'option'); ?></p>
@@ -25,7 +25,8 @@
     <div class="row">
         <div class="col-12 audi-carousel d-flex" style="background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 13%, rgba(0,212,255,0) 100%), url('<?php the_field('featured_section_image', 'option'); ?>');">
             <div class="col-md-7 col-xl-5 my-5 py-5 offset-1">
-                <div class="col-12"><h6 class="h6-custom featured-pre-title"><?php the_field('featured_headline', 'option'); ?></h6>
+                <div class="col-10 col-md-12">
+                    <h6 class="h6-custom featured-pre-title"><?php the_field('featured_headline', 'option'); ?></h6>
                     <h1 class="font-weight-bold text-white"><?php the_field('featured_main_headline', 'option'); ?></h1>
                     <p class="text-muted subline-featured"><?php the_field('featured_second_headline', 'option'); ?></p>
                 </div>
@@ -57,7 +58,7 @@
     </div>
 
     <!-- Custom Post Type Section with cars -->
-    <div class="row">
+    <div class="row" id="products">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 my-5 py-5">
             <div class="heading-products col-12 text-center"><h1><?php the_field('products_heading', 'option'); ?></h1></div>
 			<?php
@@ -78,7 +79,7 @@
 
 						?>
 
-                        <div class="card-deck col-12 col-sm-6 col-md-6 col-lg-6 my-2 col-xl-3">
+                        <div class="card-deck col-10 col-sm-6 col-md-6 col-lg-6 my-2 col-xl-3">
                             <div class="card shadow-sm bg-white rounded">
 								<?php if ( has_post_thumbnail() ) : ?>
                                     <span class="card-img-top my-4"> <center><?php the_post_thumbnail(); ?></center></span>
@@ -114,14 +115,14 @@
 
     <!--last section with contact form-->
 
-    <div class="row">
-        <div class="col-12 audi-carousel-form d-flex">
-            <div class="offset-1 col-5 my-5 py-5 col-sm-5 col-md-5 col-lg-5">
+    <div class="row" id="contact-us">
+        <div class="col-12 audi-carousel-form d-md-flex d-block">
+            <div class="offset-md-1 col-12 my-5 py-5 col-sm-12 col-md-5 col-lg-5">
                 <h6 class="h6-custom featured-pre-title"><?php the_field('contact_us_headline', 'option'); ?></h6>
                 <h1 class="font-weight-bold text-white"><?php the_field('contact_us_main_headline', 'option'); ?></h1>
                 <img class="footer-image" src="<?php the_field('contact_us_image', 'option'); ?>">
             </div>
-            <div class="col-5 col-sm-5 col-md-5 col-lg-5 mr-4 my-form-cf7">
+            <div class="col-12 mr-0 col-sm-12 col-md-5 col-lg-5 mr-md-4 my-form-cf7">
 				<?php echo do_shortcode( '[contact-form-7 id="23" title="Contact form 1"]' ); ?>
             </div>
         </div>

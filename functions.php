@@ -30,6 +30,7 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 
 register_nav_menus( array(
 	'primary' => __( 'Primary Menu', 'fsd-theme' ),
+	'footer' => __('Footer Menu', 'fsd-theme'),
 ) );
 
 /**
@@ -81,7 +82,7 @@ function register_custom_posts_init() {
 
 }
 /*
- * TGM Plugin activation and requirements for our FSD Theme
+ * TGM Plugin activation and requirements for our FSD Theme for required plugin in order for theme to work properly.
  */
 require_once get_template_directory() . '/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/tgm_activation.php';
